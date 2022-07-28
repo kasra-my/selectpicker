@@ -16,9 +16,8 @@ class PostController extends Controller
     public function index()
     {
         $posts =  Post::all();
-        $categories = Category::all();
 
-        return view('post.index', compact('posts', 'categories'));
+        return view('post.index', compact('posts'));
     }
 
     public function create()
@@ -30,8 +29,6 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->input('category'));
-
         $post = New Post;
         $post->title       = $request->input('title');
         $post->body        = $request->input('body');

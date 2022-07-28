@@ -28,6 +28,7 @@
                             <option value="{{ $category->id }}">{{ $category->name }} </option>
                         @endforeach
                     </select>
+
                     <a class="btn btn-success float-end add_category" data-bs-toggle="modal" data-bs-target="#addCatModal">
                         Add New Category
                     </a>
@@ -93,9 +94,9 @@
                                 $('#category').append('<option value="' + value.id + '">' + value.name + '</option>');
                             });
 
-                            $('#category').addClass('selectpicker').selectpicker("rebuild");
+                            // $('#category').addClass('selectpicker').selectpicker("rebuild");
                             // $('#category').addClass('selectpicker').selectpicker("refresh");
-                            // $('#category').addClass('selectpicker').selectpicker("render");
+                            $('#category').addClass('selectpicker').selectpicker("render");
 
                         },
                         error: function (jqXHR, textStatus, errorThrown) {

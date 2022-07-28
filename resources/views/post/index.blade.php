@@ -26,14 +26,14 @@
             @foreach($posts as $post)
                 <tr>
                     <td  style="width:10%;">
-                        {{  \Illuminate\Support\Str::of($post->title)->words(4,'....') }}
+                        {{  $post->title }}
                     </td>
                     <td style="width:24%;">
                         {{ $post->body }}
                     </td>
                     <td style="width:10%;">
                         @foreach($post->categories as $cat)
-                            <span>{{$cat->name}} {{ !$loop->last ? ',': ''}}</span>
+                            <span>{{ $cat->name }} {{ !$loop->last ? ',': ''}}</span>
                         @endforeach
                     </td>
                 </tr>
