@@ -94,9 +94,9 @@
                                 $('#category').append('<option value="' + value.id + '">' + value.name + '</option>');
                             });
 
-                            // $('#category').addClass('selectpicker').selectpicker("rebuild");
+                            $('#category').addClass('selectpicker').selectpicker("rebuild");
                             // $('#category').addClass('selectpicker').selectpicker("refresh");
-                            $('#category').addClass('selectpicker').selectpicker("render");
+                            // $('#category').addClass('selectpicker').selectpicker("render");
 
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
